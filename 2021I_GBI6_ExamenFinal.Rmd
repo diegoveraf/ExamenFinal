@@ -184,9 +184,29 @@ genN=cancertype_boxplots[[3]]
 
 
 ### [1 PUNTO] 2.4 Escriba la función ```reg_gen_expression```, con el parámetro ```gen```. En este caso la función visualizará una gráfica de nube de puntos (geom_point) y una regresión por tipo de "dataset". La gráfica será de comparación de gen1 con gen2; por ejemplo en el eje "x" ```GATA3``` y en el eje "y"" ```FN1```.  
+#install.packages("tidyverse")
 
 ```{r reg_gen_exp}
-# Escriba aquí su función reg_gen_expression
+#Para este ejercicio se dbee usar tibble por sus caracteristicas en las dataframe
+#Libreria y paque de esta herramienta
+#install.packages("tidyverse")
+#library(tidyverse)
+
+#Función reg_gen_expression
+reg_gen_expression <- function(genN){
+  #Se filtra la comparacion de 2 genes
+  genN1=genN[1]
+  genN2=genN[2]
+  filtro2<-filter(df_long,gen==genN1)
+  filtro3<-filter(df_long,gen==genN2)
+  #Se combinan los dataframe filtrados
+  filtroT<-cbind(filtro2,filtro3)
+  #Se toma los datos para realizar el nuevo dataframe
+  gen_expression<-tibble("dataset"=filtroT[,1],"gen1"=filtroT[,3],"gen2"=filtroT[,6])
+  #Se grafica
+  regplot<-ggplot(gen_expression,aes(x=gen1,y=gen2,color=dataset))+geom_point()+geom_smooth(method=lm,se=FALSE)
+  regplot
+}
 
 
 ```
