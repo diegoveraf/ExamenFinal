@@ -114,7 +114,7 @@ head(df_long,4)
 ```
 
 ### [0.5 PUNTOS] 1.5 A partir de la data ```df_long```, genere un **Descriptive table** (librería ```sjPlot```) y guárdelo en el subdirectorio "result"  con el nombre **mRNA_expr_summary.doc** (previamente debe seleccionar las celdas adecuadas con funciones de la librería ```dplyr``` en conjunto con el operador ```%>%```). 
-install.packages("sjPlot")
+install.packages("")
 ```{r desc_table}
 #Crear el Descriptive table 
 #Librerias usadas
@@ -133,8 +133,12 @@ descr(x=df_long %>% group_by(dataset,gen),
 
 
 ```{tex}
-# Escriba aquí su interpretación 
-
+La tabla brinda un resumen estadistico de los principales genes y canceres presentes en una dataframe, donde se
+pueden decir que los 3 proncipales canceres son: BRCA (590), OV (561) y LUSC (154). Ademas, los genes que mas se
+expresaron respectivamente para estos tipos de cancer son: ESR1 (media 2.3), FN1 (media 1.33) y MUC1 (media 0.56).
+Al contrario, los canceres con observaciones menores a 100 y 50 fueron KIPAN (88) y UCEC (54),
+con mayor expresion en el gen PTEM (media 0.72) y ESR1 (media 2.17). Finalmente, 
+el cancer con menor repeticion fue el KIRP con 16 observaciones, con mayor expresion en el gen PTEN.
 ```
 
 
