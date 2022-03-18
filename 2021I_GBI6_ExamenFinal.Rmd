@@ -225,7 +225,11 @@ reg_genplots<-lapply(tipogen_combn,reg_gen_expression)
 
 ### [0.5 PUNTOS] 2.6. Guarde en el subdirectorio ```result``` el onceavo plot de la lista ```reg_genplots``` con el nombre ```regresion11.pdf```. La definición de a figura debe ser de 300dpi. 
 ```{r reg11}
-# Escriba el código para guardar el onceavo plot. 
+#Guardar el onceavo plot. 
+reg_genplots[[11]]
+ggsave("results/regresion11.pdf",dpi = 300)
+#Se nombre una nueva variable para resolver el siguiente literal
+reg11=reg_genplots[[3]]
 
 ```
 
