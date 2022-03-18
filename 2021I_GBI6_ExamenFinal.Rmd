@@ -90,9 +90,16 @@ head(df,4)
 ```
 
 ### [1 PUNTO] 1.3 Cree una función de nombre ```long_df``` para transformar la data ```df``` de la forma wide a long.
-
+install.packages("reshape2")
 ```{r funcion_long}
-# Escriba aquí la función long_df
+#Funcion para llamar a melt
+library(reshape2)
+# Función long_df
+long_df<-function(df){
+  #Se cambia el formato con ayuda de melt
+  long<-melt(df,id.vars=1:2,measure.vars=3:9,variable.name="gen",value.name="expresion_level")
+  long
+}
 
 
 ```
