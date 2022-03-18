@@ -237,7 +237,18 @@ reg11=reg_genplots[[3]]
 ### [1 PUNTO] 2.7. Interprete los resultados de las figuras ```boxplot3.png``` y ```regresion11.pdf```.
 
 ```{tex}
-# Esciba aquí su intepretación
+BOXPLOT
+El tercer boxplot, muestra los genes presentes en la datafrane, donde los siguientes genes tienen mayor distribucion
+en los sigientes quintiles: GATA3 en Q1 y Q2, PTEN en Q4, XBP1, ESR1 y GAPDH en Q3, y MUC1 en conjutno con FN1 poseen
+una distribucion mas equilibrada en todos los quintiles. Igualemente, se puede decir que esta distribucion de puntos
+en la mayoria de los casos es asimetrico y con valores atipicos, no teniendo una distriubucion normal clara.    
+
+
+REGRESION
+La regresion 11, posee una gran cantidad de puntos, donde destacan los provenientes de los canceres BRCA y OV
+(previamente mencionados en la descripcion de la tabla). Por lo tanto, su nube de puntos se representa esta
+concentracion de los cancecres presentes en estos 2 genes.
+
 
 ```
 
